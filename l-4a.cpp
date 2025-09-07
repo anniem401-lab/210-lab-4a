@@ -17,7 +17,6 @@ struct Color
 
 int main ()
 {
-    vector<Color> colors(13); // Vector to hold 13 colors
 
     int i; // Cycle counter
     i = 0; // Zero cycles so far
@@ -25,7 +24,7 @@ int main ()
     while(i < 13) // Does exactly 10 cycles
     {
         cout << "Color#: ";
-        cin >> colors[i].name;
+        cin >> color[i].name;
         cout << "R value: ";
         cin >> colors[i].red;
         cout << "G value: ";
@@ -35,6 +34,13 @@ int main ()
         i++; // Increment cycle counter
     }
 
+    vector<vector<Color>> colors;
+    
+    vector<vector<Color>> colors = {
+        vector<Color>(13)
+    };
+
+    vector<vector<Color>>colors(1, vector<Color>(13));
 
     return 0;
 }
