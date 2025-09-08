@@ -25,23 +25,26 @@ int main ()
     int i // Cycle counter
     i = 0; // Zero cycles so far
 
-    while(i < n) // Does exactly n cycles
+    while(i != n) // Does exactly n cycles
     {
+        Color temp;
+
         cout << "Color#: ";
-        cin >> colors[i].name;
-        cout << "R value: ";
-        cin >> colors[i].red;
-        cout << "G value: ";
-        cin >> colors[i].green;
-        cout << "B value: ";
-        cin >> colors[i].blue;
+        cin >> temp.name;
+
+        cout << "R value: " << (temp.red = rand() % 256) << endl; // Random number between 0 and 255
+        cin >> temp.red;
+        cout << "G value: " << (temp.green = rand() % 256) << endl; // Random number between 0 and 255
+        cin >> temp.green;
+        cout << "B value: " << (temp.blue = rand() % 256) << endl; // Random number between 0 and 255
+        cin >> temp.blue;
         i++; // Increment cycle counter
     }
 
     vector<vector<Color>> colors;
 
     vector<vector<Color>> colors = {
-        vector<Color>(name, red, green, blue)
+        vector<Color>(temp.name, temp.red, temp.green, temp.blue)
     };
 
     vector<vector<Color>>colors(1, vector<Color>(n));
