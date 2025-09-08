@@ -6,6 +6,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 // A structure to hold color information
@@ -22,40 +23,38 @@ int main ()
     srand(time(0)); // Seed the random number generator
     int n = 25 + (rand() % 50); // Random number between 25 and 50
 
-    vector<Color> colors = {};
+    vector<Color> colors; // Vector to hold Color structures
 
     int i; // Cycle counter
     i = 0; // Zero cycles so far
 
-    while(i != n) // Does exactly n cycles
-    {
+    while(true) // Does exactly n cycles
+    {   
+        if(i >= n) // If cycle counter is equal to or greater than n
+            break; // Exit the loop
         Color temp; // Temporary Color structure
 
         cout << (temp.red = rand() % 256) << endl; // Random number between 0 and 255
         cout << (temp.green = rand() % 256) << endl; // Random number between 0 and 255
         cout << (temp.blue = rand() % 256) << endl; // Random number between 0 and 255
-        i++; // Increment cycle counter
+        i = i + 1; // Increment cycle counter
 
         colors.push_back(temp); // Add the temp Color to the vector
     }
 
-    //Row 1
-    cout << setw(5) << left << "Color#" << endl;
-    cout << setw(1) << left << " " << endl;
-    cout << setw(5) << left << "R value" << endl;
-    cout << setw(1) << left << " " << endl;
-    cout << setw(5) << left << "G value" << endl;
-    cout << setw(1) << left << " " << endl;
-    cout << setw(5) << left << "B value" << endl;
+    for(const auto& color : colors) // Range-based for loop to display all colors
+    {
+        cout << "Color# " << endl;
+        cout << "-------" << endl;
+        cout << "R Value: " << color.red << endl;
+        cout << "-------" << endl;
+        cout << "G Value: " << color.green << endl;
+        cout << "-------" << endl;
+        cout << "B Value: " << color.blue << endl;
+        cout << "-------" << endl;
+        cout << endl;
+    }
 
-    //Row 2
-    cout << setw(5) << left << "=====" << endl;
-    cout << setw(1) << left << " " << endl;
-    cout << setw(5) << left << "=======" << endl;
-    cout << setw(1) << left << " " << endl;
-    cout << setw(5) << left << "=======" << endl;
-    cout << setw(1) << left << " " << endl;
-    cout << setw(5) << left << "=======" << endl;
-
+    
     return 0;
 }
