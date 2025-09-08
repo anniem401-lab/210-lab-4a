@@ -39,6 +39,8 @@ int main ()
         cout << "B value: " << (temp.blue = rand() % 256) << endl; // Random number between 0 and 255
         cin >> temp.blue;
         i++; // Increment cycle counter
+
+        colors.push_back(temp); // Add the temp Color to the vector
     }
 
     vector<vector<Color>> colors;
@@ -47,7 +49,15 @@ int main ()
         vector<Color>(temp.name, temp.red, temp.green, temp.blue)
     };
 
-    vector<vector<Color>>colors(1, vector<Color>(n));
+    vector<vector<Color>> colors(n, vector<Color>(4)); // Create a 2D vector with n rows and 4 columns
+
+    for (int i = 0; i < n; i++)
+    {
+        colors[i][0] = colors[i].name;
+        colors[i][1] = colors[i].red;
+        colors[i][2] = colors[i].green;
+        colors[i][3] = colors[i].blue;
+    }
 
     return 0;
 }
