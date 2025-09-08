@@ -2,8 +2,10 @@
 // IDE used: Visual Studio Code
 
 #include <iostream>
-#include <iomanip>
 #include <vector>
+#include <ctime>
+#include <cstdlib>
+#include <string>
 using namespace std;
 
 // A structure to hold color information
@@ -17,14 +19,16 @@ struct Color
 
 int main ()
 {
+    srandtime(0); // Seed the random number generator
+    25 + (rand() % 50) = n; // Random number between 25 and 50
 
-    int i; // Cycle counter
+    int i // Cycle counter
     i = 0; // Zero cycles so far
 
-    while(i < 13) // Does exactly 10 cycles
+    while(i < n) // Does exactly n cycles
     {
         cout << "Color#: ";
-        cin >> color[i].name;
+        cin >> colors[i].name;
         cout << "R value: ";
         cin >> colors[i].red;
         cout << "G value: ";
@@ -35,12 +39,12 @@ int main ()
     }
 
     vector<vector<Color>> colors;
-    
+
     vector<vector<Color>> colors = {
-        vector<Color>(13)
+        vector<Color>(name, red, green, blue)
     };
 
-    vector<vector<Color>>colors(1, vector<Color>(13));
+    vector<vector<Color>>colors(1, vector<Color>(n));
 
     return 0;
 }
