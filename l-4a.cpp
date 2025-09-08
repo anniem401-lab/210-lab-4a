@@ -34,16 +34,18 @@ int main ()
             break; // Exit the loop
         Color temp; // Temporary Color structure
 
-        cout << (temp.red = rand() % 256) << endl; // Random number between 0 and 255
-        cout << (temp.green = rand() % 256) << endl; // Random number between 0 and 255
-        cout << (temp.blue = rand() % 256) << endl; // Random number between 0 and 255
+        temp.red = rand() % 256; // Random number between 0 and 255
+        temp.green = rand() % 256; // Random number between 0 and 255
+        temp.blue = rand() % 256; // Random number between 0 and 255
         i = i + 1; // Increment cycle counter
 
         colors.push_back(temp); // Add the temp Color to the vector
     }
 
-    for(const auto& color : colors) // Range-based for loop to display all colors
+    // Display the colors
+    for(const auto& color : colors)
     {
+        cout << endl;
         cout << "Color# " << endl;
         cout << "-------" << endl;
         cout << "R Value: " << color.red << endl;
@@ -54,7 +56,6 @@ int main ()
         cout << "-------" << endl;
         cout << endl;
     }
-
     
     return 0;
 }
