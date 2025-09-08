@@ -31,21 +31,18 @@ int main ()
     {
         Color temp; // Temporary Color structure
 
-        cout << "Color#: ";
-        cin >> temp.name;
-
-        cout << "R value: " << (temp.red = rand() % 256) << endl; // Random number between 0 and 255
-        cin >> temp.red;
-        cout << "G value: " << (temp.green = rand() % 256) << endl; // Random number between 0 and 255
-        cin >> temp.green;
-        cout << "B value: " << (temp.blue = rand() % 256) << endl; // Random number between 0 and 255
-        cin >> temp.blue;
+        cout << (temp.red = rand() % 256) << endl; // Random number between 0 and 255
+        cout << (temp.green = rand() % 256) << endl; // Random number between 0 and 255
+        cout << (temp.blue = rand() % 256) << endl; // Random number between 0 and 255
         i++; // Increment cycle counter
 
         colors.push_back(temp); // Add the temp Color to the vector
     }
 
-    vector<vector<Color>> colors(n, vector<Color>(4)); // Create a 2D vector with n rows and 4 columns
-
+    for (int i = 0; i < colors.size(); i++){
+        for (int j = 0; j < colors.size() - 1; j++){
+ 
+        }
+    }
     return 0;
 }
