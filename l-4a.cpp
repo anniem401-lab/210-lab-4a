@@ -39,10 +39,23 @@ int main ()
         colors.push_back(temp); // Add the temp Color to the vector
     }
 
-    for (int i = 0; i < colors.size(); i++){
-        for (int j = 0; j < colors.size() - 1; j++){
- 
-        }
-    }
+    //Row 1
+    cout << setw(5) << left << "Color#" << endl;
+    cout << setw(1) << left << " " << endl;
+    cout << setw(5) << left << "R value" << endl;
+    cout << setw(1) << left << " " << endl;
+    cout << setw(5) << left << "G value" << endl;
+    cout << setw(1) << left << " " << endl;
+    cout << setw(5) << left << "B value" << endl;
+
+    //Row 2
+    cout << setw(5) << left << "=====" << endl;
+    cout << setw(1) << left << " " << endl;
+    cout << setw(5) << left << "=======" << endl;
+    cout << setw(1) << left << " " << endl;
+    cout << setw(5) << left << "=======" << endl;
+    cout << setw(1) << left << " " << endl;
+    cout << setw(5) << left << "=======" << endl;
+
     return 0;
 }
