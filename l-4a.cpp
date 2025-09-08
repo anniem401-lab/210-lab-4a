@@ -22,7 +22,7 @@ int main ()
     srand(time(0)); // Seed the random number generator
     int n = 25 + (rand() % 50); // Random number between 25 and 50
 
-    vector<Color> colors; // Vector to hold Color structures
+    vector<Color> colors = {};
 
     int i; // Cycle counter
     i = 0; // Zero cycles so far
@@ -45,19 +45,7 @@ int main ()
         colors.push_back(temp); // Add the temp Color to the vector
     }
 
-    vector<vector<Color>>colors = {
-        vector<Color>(temp.name, temp.red, temp.green, temp.blue)
-    };
-
-    vector<vector<Color>>colors(n, vector<Color>(4)); // Create a 2D vector with n rows and 4 columns
-
-    for (int i = 0; i < n; i++)
-    {
-        colors[i][0] = colors[i].name;
-        colors[i][1] = colors[i].red;
-        colors[i][2] = colors[i].green;
-        colors[i][3] = colors[i].blue;
-    }
+    vector<vector<Color>> colors(n, vector<Color>(4)); // Create a 2D vector with n rows and 4 columns
 
     return 0;
 }
